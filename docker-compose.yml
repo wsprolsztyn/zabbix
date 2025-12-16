@@ -23,7 +23,7 @@ services:
     container_name: zabbix-server
     restart: unless-stopped
     environment:
-      DB_SERVER_HOST: mysql
+      DB_SERVER_HOST: zabbix-mysql
       MYSQL_DATABASE: zabbix
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix_pwd
@@ -42,7 +42,7 @@ services:
     restart: unless-stopped
     environment:
       ZBX_SERVER_HOST: zabbix-server
-      DB_SERVER_HOST: mysql
+      DB_SERVER_HOST: zabbix-mysql
       MYSQL_DATABASE: zabbix
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix_pwd
